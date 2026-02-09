@@ -1,0 +1,361 @@
+/* 1. Layout Wrapper */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f7f9;
+  
+}
+
+/* 2. Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  height: 100vh;
+  position: fixed; /* Keeps it on the left while scrolling */
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Profile Section (The blue top part) */
+.profile-section {
+  background: linear-gradient(135deg, #c4cbe8, #2e59a8);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.profile-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 4. Navigation Links */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.nav-link {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.nav-link:hover {
+  background-color: #f8f9fa;
+  color: #4c8bf5;
+}
+
+/* This class is automatically added by Angular's routerLinkActive */
+.nav-link.active {
+  background-color: #4c8bf5;
+  color: white !important;
+  border-left: 4px solid #1a458a;
+}
+
+/* 5. Main Content Area */
+.dashboard-header {
+  /* This creates the vibrant orange gradient seen in your blog reference */
+  background: linear-gradient(to right, #93d3e1, #c9eeb6);
+  padding: 40px 20px; /* Vertical and horizontal spacing */
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   height: 50px;
+   text-align:center;
+   margin-left:50px ;
+  
+}
+
+.container {
+  max-width: 1200px; /* Keeps the content aligned with the rest of your page */
+  margin: 0 auto;
+  
+}
+
+.dashboard-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 0 15px 0; /* Space below the title */
+  letter-spacing: 0.5px;
+  
+}
+
+/* Styling the "Home >> ..." breadcrumb section */
+.dashboard-box {
+  font-size: 16px;
+  width: 1200px;
+  min-height: 3px;
+   align-items: center;
+}
+
+.dashboard-box a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Subtle underline */
+  transition: border-color 0.3s;
+  justify-content: space-between;
+  align-self: center;
+  text-align: center;
+  
+}
+
+.dashboard-box a:hover {
+  border-bottom-color: #ffffff;
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 40px;
+  
+}
+
+.dashboard-box span {
+  opacity: 0.9;
+  margin-left: 5px;
+  text-align: center;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.dashboard-box h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 2px;
+ 
+}
+
+
+.search-bar {
+  display: flex; /* Keeps input and button on the same line */
+  max-width: 300px; /* Limits the width of the search bar */
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 25px; /* Rounded corners */
+  overflow: hidden; /* Ensures the button follows the border-radius */
+  transition: border-color 0.3s ease;
+ margin-left: 980px;
+ margin-top: 60px;
+
+  
+}
+
+/* Subtle highlight when the user clicks the search bar */
+.search-bar:focus-within {
+  border-color: #007bff;
+}
+
+.search-bar input {
+  flex-grow: 1; /* Makes the input take up all available space */
+  border: none;
+  padding: 10px 15px;
+  outline: none; /* Removes the default blue box since we styled focus-within */
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Container and Header styling */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fb;
+}
+
+.dashboard-head {
+  background-color: #eaf0df;
+ margin-top: 40px;
+  min-width: 100px;
+   padding: 40px 20px; /* Vertical and horizontal spacing */
+  
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   height: 40px;
+   text-align:center;
+   margin-left :120px ;
+}
+
+.dashboard-head h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  margin-left: 570px;
+}
+/* Container for the cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+  padding: 20px;
+  margin-left: 90px;
+  background-color: #f8f9fb;
+}
+
+/* Card Base Styling */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+
+.card h3 {
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d3748;
+ 
+}
+
+/* Card Sizes */
+.card.small {
+  grid-column: span 1;
+}
+
+.card.wide {
+  grid-column: span 2; /* Stretches across 2 columns */
+}
+
+/* Chart Height - CRITICAL for Chart.js */
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 260px; /* Fixed height so the canvas doesn't collapse */
+  width: 100%;
+}
+
+.small .chart-container {
+  height: 200px; /* Smaller height for the doughnut chart */
+}
+
+.dashboard-page {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Header with Title and Apply Button */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-section h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.back-arrow {
+  color: #6366f1;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.subtitle {
+  color: #1a3359;
+  font-size: 14px;
+}
+
+/* Filters Row */
+.global-filters {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+.filter-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-select {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #435c7d;
+  border-radius: 6px;
+  background: #fff;
+}
+.dashboard-page {
+  padding: 20px;
+  background-color: #dce4e9;
+  width: 80%;
+  min-width: 20px;
+  margin-left: 200px;
+  margin-top: 35px;
+  
+}
+
+/* Header with Title and Apply Button */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-section h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.back-arrow {
+  color: #6366f1;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.subtitle {
+  color:black;
+  font-size: 14px;
+}
+
+
+
+

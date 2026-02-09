@@ -1,0 +1,101 @@
+.profile-main-container {
+  background-color:rgb(245, 245, 245);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.profile-content-card {
+  background: rgb(239, 238, 238);
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #4d4b4b;
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+/* Form Styling */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  width: 180px;
+  color: #080707;
+  font-size: 0.9rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Linked Accounts */
+.section-divider {
+  border-top: 1px solid #f0f0f0;
+  margin: 25px 0;
+}
+
+.linked-accounts h3, .delete-section h3 {
+  font-size: 1rem;
+  color: #181111;
+  margin-bottom: 15px;
+}
+
+.button-row {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  color: rgb(14, 13, 13);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-google { background-color: #d3cfcf; }
+
+/* Delete Section */
+.delete-section p {
+  color: black;
+  font-size: 0.85rem;
+}
+
+.delete-link {
+  color: #d42714;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Save Button */
+.footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.btn-save {
+  background-color: #42d3c1;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}

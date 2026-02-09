@@ -1,0 +1,54 @@
+<h1>Customer Contacs</h1>
+
+<div class="dashboard-header">
+  <div>
+   
+    <p class="subtitle">View and manage your current contacts</p>
+  </div>
+  <button class="btn-primary" (click)="toggleForm()">{{ showForm ? 'Close Form' : '+ Add New contact' }}</button>
+</div>
+<div class="card" *ngIf="showForm" style="margin-bottom: 20px; padding: 20px;">
+  <div class="form-grid">
+    <input type="text" [(ngModel)]="newLead.name" placeholder="Name">
+    <input type="email" [(ngModel)]="newLead.email" placeholder="Email">
+    <input type="text" [(ngModel)]="newLead.phone" placeholder="Phone">
+    <input type="text" [(ngModel)]="newLead.role" placeholder="Role">
+    <button class="btn-primary" (click)="addContact()">Save Contact</button>
+  </div>
+</div>
+<div class="card">
+  <div class="card-table-header">
+    <h3> List of Contacts</h3>
+    <span class="badge-total">Total : {{ leads.length }}</span>
+  </div>
+</div>
+<div class="user-list-container">
+  <div class="user-list-card">
+<div class="table-wrapper">
+
+  <table class="user-table" *ngIf="leads.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+         <th>Phone</th>
+          <th>Role</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let lead of leads; trackBy: trackByEmail">
+        <td >{{ lead.name }}</td>
+        <td>{{ lead.email }}</td>
+         <td>{{ lead.phone }}</td>
+         <td>{{lead.role}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="no-data" *ngIf="leads.length === 0">
+    No leads found
+  </p>
+</div>
+</div>
+</div>

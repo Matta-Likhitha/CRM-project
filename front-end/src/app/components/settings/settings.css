@@ -1,0 +1,110 @@
+.settings-container {
+  padding: 40px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.settings-card {
+  display: flex;
+  background: rgb(226, 233, 244);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+ 
+}
+
+/* Sidebar Inside Card */
+.settings-sidebar {
+  width: 200px;
+  background-color: #eef1f3;
+  border-right: 1px solid #eee;
+  padding: 20px 0;
+    border-color: black;
+}
+
+.settings-sidebar a {
+  display: block;
+  padding: 12px 25px;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.settings-sidebar a.active {
+  background-color: #fff;
+  color: #3b5998; /* Match your sidebar blue */
+  font-weight: bold;
+  border-left: 3px solid #3b5998;
+}
+
+/* Content Area */
+.settings-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.settings-content header h2 { margin: 0; font-size: 1.5rem; }
+.settings-content header p { color: #888; font-size: 0.9rem; margin-top: 5px; }
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-info label { display: block; font-weight: 600; color: #333; }
+.setting-info p { margin: 4px 0 0; font-size: 0.85rem; color: #777; }
+
+.setting-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+/* Toggle Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; width: 16px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #42d3c1; } /* Your Teal color */
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* Buttons */
+.settings-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn-cancel { background: none; border: 1px solid #ddd; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+.btn-save { background: #3b5998; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }

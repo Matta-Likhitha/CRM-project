@@ -1,0 +1,96 @@
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+ min-width: 60px;
+ width: 700px;
+}
+
+/* Grid layout to align inputs and button in one row */
+.form-grid {
+  display: flex;
+  /* Creates 5 columns that adjust based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+  align-items: center;
+  min-width: 40px;
+}
+
+/* Individual Input Styles */
+.form-grid input {
+  width: 70%;
+  min-width: 70px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state for a professional feel */
+.form-grid input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.1);
+}
+
+.user-list-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  
+}
+
+.user-list-card {
+ 
+  background: rgb(239, 233, 233);
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+ width: 100%;
+ min-width: 150px;
+ 
+ 
+}
+.user-table {
+  width: 100%;
+  min-width: 450px;
+  height: 90%;
+  min-height: 350px;
+  border-collapse: collapse;
+ text-align: left;
+
+}
+
+.user-table th,
+.user-table td  {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color:rgb(236, 240, 240);
+  border-color: rgb(128, 162, 162);
+  
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.no-data {
+  margin-top: 16px;
+  color: #777;
+}
+button{
+  display: flex;
+  justify-content:space-between; /* Pushes items to opposite ends */
+  align-items: center;           /* Vertically centers the button with the text */
+}
+h1{
+   background: linear-gradient( #ead9c1, #e3eedd);
+  padding: 15px 5px; /* Vertical and horizontal spacing */
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ width: 90%;
+ max-width: 700px;
+   text-align:center;
+   margin-left: 350px;
+   
+}
