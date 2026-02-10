@@ -6,6 +6,66 @@
   
 }
 
+/* 2. Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  height: 100vh;
+  position: fixed; /* Keeps it on the left while scrolling */
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Profile Section (The blue top part) */
+.profile-section {
+  background: linear-gradient(135deg, #c4cbe8, #2e59a8);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.profile-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 4. Navigation Links */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.nav-link {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.nav-link:hover {
+  background-color: #f8f9fa;
+  color: #4c8bf5;
+}
+
+/* This class is automatically added by Angular's routerLinkActive */
+.nav-link.active {
+  background-color: #4c8bf5;
+  color: white !important;
+  border-left: 4px solid #1a458a;
+}
 .profile-content-card {
   background: rgb(239, 238, 238);
   width: 100%;

@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Full screen height */
-  background-color: #f4f7f6; /* Light grey background */
+  background-color: #f4f7f6;
+  /* Light grey background */
 }
 
 /* The actual "Box" or Card */
@@ -85,3 +86,17 @@ input:focus {
 button{
      margin-top: 40px;
 }
+.register{
+  margin-top: 20px;
+}
+.register-link {
+    color: #007bff; /* Standard blue link color */
+    text-decoration: none; /* Removes underline by default */
+    cursor: pointer;
+     /* Ensures the hand pointer appears */
+  }
+
+  .register-link:hover {
+     /* Adds underline when hovering */
+    color: #0056b3; /* Darkens slightly on hover */
+  }

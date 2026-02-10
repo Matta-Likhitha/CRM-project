@@ -15,32 +15,38 @@
   <p onclick="contacts()"></p>
     <p onclick="profile()"></p>
     <p onclick="settings()"></p>
+    <p onclick="goals()"></p>
 <div class="dashboard-header">
   <div class="container">
     <div class="dashboard-box">
-      <h1 class="dashboard-title">Welcome to CRM Dashboard !</h1>
-      <a routerLink="/dashboard">Home</a> >> <span>CRM Dashboard for 2026 customer's Info</span>
+      <h1 class="dashboard-title">Welcome to your Student Dashboard !</h1>
+      <a routerLink="/dashboard">Home</a> >> <span> Student records for 2026 !</span>
     </div>
       <form #searchForm="ngForm" (ngSubmit)="onSearch(searchForm.value.q)" class="search-bar">
     <input type="text" placeholder="Search bar" name="q" ngModel required>
     <button type="submit">search</button>
   </form>
     </div>
-  <h1 style="color: black;margin-right:700px;margin-top:80px;">Learn more about CRM</h1>
-  <p style="color: black;margin-left:200px;margin-top:50px;text-align:left">A CRM stands for Customer Relationship Management.It is a system, software, or strategy used by businesses to manage interactions with customers and potential customers in one central place.
-    A CRM helps a business .Store customer information.Track conversations and interactions.Manage sales leads and deals.Improve customer service.Build long-term customer relationships.A Customer Relationship Management (CRM) website serves as a digital hub for managing all company interactions with current and potential customers. 
-    It is designed to centralize, streamline, and improve customer relationships, ultimately boosting sales, efficiency, and customer satisfaction. A CRM system is a data-driven, often cloud-based, software solution that stores, tracks, and manages all customer-related information—such as contact details, purchase history, and support tickets—in one centralized location. It acts as a single source of truth for sales, marketing, and customer service teams, ensuring everyone is on the same page. 
+  <h1 style="color: black;margin-right:700px;margin-top:80px;"> Study Timetables</h1>
+  <p style="color: black;margin-left:200px;margin-top:50px;text-align:left">
+    Welcome to your student portal. Studynet shows you a quick view of upcoming events and timetables 
+    related to your course and your teaching sessions along with the scheduled assignments, due dates.You can view 
+  a more detailed teaching timetable at this website.
+  If you are a new returning student please note that timetable for the new 2025/26 academic year will be
+  released on august. If you are new student, your timetable will be available up to three days after completing 
+  the registration.          
+  If you are a member of staff, you can access the your personal timetable from monday.
   </p>
   <header class="dashboard-head">
-<h1>CRM dashboard for 2026</h1>
+<h1>Student dashboard for 2026</h1>
     <div class="header-actions">
-      <span>Boards </span>
+      <span>Look ahead </span>
       <button class="add-widget">+ Add widget</button>
     </div>
     </header>
     <div class="dashboard-grid">
     <div class="card small">
-      <h3>Deal stages</h3>
+      <h3>Student Status</h3>
       <div class="chart-container">
         <canvas baseChart
           [data]="doughnutChartData"
@@ -49,13 +55,13 @@
         </canvas>
       </div>
       <ul class="legend">
-        <li><span class="dot won"></span> Won</li>
-        <li><span class="dot negotiation"></span> Negotiation</li>
-        <li><span class="dot proposal"></span> Proposal</li>
+        <li><span class="dot enrolled"></span> Enrolled</li>
+        <li><span class="dot pending"></span> Pending</li>
+        <li><span class="dot application"></span> Application</li>
       </ul>
     </div>
     <div class="card wide">
-      <h3>Sales activities by rep</h3>
+      <h3>Attendence Status</h3>
       <div class="chart-container">
         <canvas baseChart
           [data]="barChartData"
@@ -67,104 +73,52 @@
     </div>
   
     </div>
-    <div class="dashboard-page">
-  <div class="main-header">
-    <div class="title-section">
-      <h1 style="color: black;"><span class="back-arrow">‹</span> My Work</h1>
-      <p class="subtitle">A Dashboard summarizing my work assignments.</p>
-    </div>
-    <div class="action-section">
-      <button class="btn-apply" (click)="toggleForm()">
-        {{ showForm ? 'Close' : 'Apply' }}
-      </button>
-    </div>
-  </div>
-
-  <div class="global-filters">
-    <div class="filter-group">
-      <label style="color: black;"><span class="required">*</span>Project</label>
-      <select class="dashboard-select">
-        <option>Developer Center</option>
+    <div class="course-container">
+     <div class="course-header">
+      <h1>Course List</h1>
+      <p class="subtitle">My course details</p>
+      <section class="detail-section">
+    <div class="section-header">
+      <h3>Modules</h3>
+      <select class="year-dropdown">
+        <option>2025/26</option>
+        <option>2024/25</option>
       </select>
     </div>
-    <div class="filter-group">
-      <label style="color: black;">Sprint</label>
-      <select class="dashboard-select">
-        <option>June Sprint</option>
-      </select>
+    <div class="link-item">
+      <a href="#">7COM1084-0901-2025 - Advanced Research Topics in Computer Science</a>
     </div>
-  </div>
-
-  <hr class="divider">
-
-  <h2 class="section-label" style="color: black;">Preview Template</h2>
-
-  <div class="dashboard-grid">
-    
-    <div class="card table-container">
-      <div class="card-header">
-        <h3>My Work</h3>
-      </div>
-      
-      <div class="inline-form" *ngIf="showForm">
-        <input type="text" [(ngModel)]="newLead.name" name="name" placeholder="Title">
-        <input type="text" [(ngModel)]="newLead.role" name="role" placeholder="Role">
-        <button (click)="addContact()">Save</button>
-      </div>
-
-      <div class="table-filters">
-        <div class="filter-pill">Assignee: <strong>Mia (PO)</strong> ▾</div>
-        <div class="filter-pill">Project Name: <strong>Developer Center</strong> ▾</div>
-        <div class="filter-controls">
-          <span class="btn-text">+ Filter</span>
-          <span class="btn-text">↺ Reset</span>
-        </div>
-      </div>
-
-      <table class="work-table">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Status</th>
-            <th>Priority</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let lead of leads">
-            <td><span class="icon-blue">📁</span> {{ lead.name }}</td>
-            <td><span class="badge-done">Done</span></td>
-            <td><span class="priority-flag">🚩</span> {{ lead.role || 'Highest' }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="button-wrapper">
+      <button class="btn-browse">Browse...</button>
     </div>
+  </section>
 
-    <div class="stats-column">
-      
-      <div class="card stat-card">
-        <h3>The Total Number of My Work</h3>
-        <p class="card-subtext">Developer Center | June Sprint</p>
-        <div class="total-display">
-          <span class="big-num">{{ leads.length }}</span>
-          <span class="percent-change">0%</span>
-        </div>
-      </div>
-
-      <div class="card chart-card">
-        <h3>Priority Distribution of My Work</h3>
-        <p class="card-subtext">Developer Center | June Sprint</p>
-        <div class="donut-container">
-          <div class="donut-chart"></div>
-          <div class="chart-legend">
-            <div><span class="dot highest"></span> Highest</div>
-            <div><span class="dot high"></span> High</div>
-          </div>
-        </div>
-      </div>
-
+  <section class="detail-section">
+    <h3>Programme sites</h3>
+    <div class="link-item">
+      <a href="#">Modular Masters Programme in Computer Science</a>
     </div>
-  </div>
+    <div class="button-wrapper">
+      <button class="btn-browse">Browse...</button>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <h3>General sites</h3>
+    <div class="link-item border-bottom">
+      <a href="#">Clubs Events Activities - Physics Engineering Computer Science</a>
+    </div>
+    <div class="link-item">
+      <a href="#">Academic Support Hub</a>
+    </div>
+    <div class="button-wrapper">
+      <button class="btn-browse">Browse...</button>
+    </div>
+  </section>
 </div>
+  
+     </div>
+    </div>
+   
     </div>
        
-</div>

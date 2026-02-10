@@ -1,0 +1,108 @@
+ 
+  <div class="sidebar">
+    <div class="profile-section">
+      <div class="profile-circle">L</div> <h3>Likhitha</h3>
+    </div>
+    <nav class="nav-menu">
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
+      <a routerLink="/profile" routerLinkActive="active" class="nav-link">Profile</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contacts</a>
+      <a routerLink="/settings" routerLinkActive="active" class="nav-link">Settings</a>
+      <a routerLink="/goals" routerLinkActive="active" class="nav-link">Goals</a>
+      <a (click)="onLogout()" class="nav-link logout-btn">Logout</a>
+    </nav>
+     
+  </div><div class="dashboard-page">
+  
+  <div class="main-header">
+    <div class="title-section">
+      <h1 style="color: black;"><span class="back-arrow">‹</span> My Assignments</h1>
+      <p class="subtitle">A Dashboard summarizing my work assignments</p>
+    </div>
+  </div>
+
+  <div class="global-filters">
+    <div class="filter-group">
+      <label style="color: black;"><span class="required">*</span>Project</label>
+      <select class="dashboard-select">
+        <option>Developer Center</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label style="color: black;">Sprint</label>
+      <select class="dashboard-select">
+        <option>June Sprint</option>
+      </select>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h2 class="section-label" style="color: black;">Preview Template</h2>
+
+  <div class="dashboard-grid">
+    
+    <div class="card table-container">
+      <div class="card-header">
+        <h3>My assingment</h3>
+      </div>
+      
+      <div class="inline-form" *ngIf="showForm">
+        <input type="text" name="name" placeholder="Title">
+        <input type="text"  name="role" placeholder="Role">
+       
+      </div>
+
+      <div class="table-filters">
+        <div class="filter-pill">Assignee: <strong>Mia (PO)</strong> ▾</div>
+        <div class="filter-pill">Project Name: <strong>Developer Center</strong> ▾</div>
+        <div class="filter-controls">
+          <span class="btn-text">+ Filter</span>
+          <span class="btn-text">↺ Reset</span>
+        </div>
+      </div>
+
+      <table class="work-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lead of leads">
+            <td><span class="icon-blue">📁</span> {{ lead.name }}</td>
+            <td><span class="badge-done">Done</span></td>
+            <td><span class="priority-flag">🚩</span> {{ lead.role || 'Highest' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stats-column">
+      
+      <div class="card stat-card">
+        <h3>The Total Number of hours spent</h3>
+        <p class="card-subtext">Developer Center | June Sprint</p>
+        <div class="total-display">
+          <span class="big-num">{{ leads.length }}</span>
+          <span class="percent-change">0%</span>
+        </div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>Priority Distribution of My Work</h3>
+        <p class="card-subtext">Developer Center | June Sprint</p>
+        <div class="donut-container">
+          <div class="donut-chart"></div>
+          <div class="chart-legend">
+            <div><span class="dot highest"></span> Highest</div>
+            <div><span class="dot high"></span> High</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

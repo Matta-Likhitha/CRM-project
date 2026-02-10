@@ -32,11 +32,14 @@ profile(){
 settings(){
   this.router.navigate(['/settings']);
 }
+goals(){
+    this.router.navigate(['/goals']);
+}
 onLogout(){
   this.router.navigate(['/login']);
 }
   // 1. Deal Stages (Doughnut Chart)
-  public doughnutChartLabels: string[] = ['Won', 'Negotiation', 'Proposal'];
+  public doughnutChartLabels: string[] = ['enrolled', 'pending', 'application'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [
@@ -70,11 +73,11 @@ onLogout(){
     }
   };
   public barChartData: ChartData<'bar'> = {
-    labels: ['Rep 1', 'Rep 2', 'Rep 3', 'Rep 4', 'Rep 5', 'Rep 6'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
-      { data: [12, 19, 3, 5, 2, 3], label: 'Won', backgroundColor: '#b19cd9' },
-      { data: [2, 3, 20, 5, 1, 4], label: 'Negotiation', backgroundColor: '#4e73df' },
-      { data: [3, 10, 13, 15, 22, 10], label: 'Proposal', backgroundColor: '#42d3c1' }
+      { data: [12, 19, 3, 5, 2, 3], label: 'enrolled', backgroundColor: '#b19cd9' },
+      { data: [2, 3, 20, 5, 1, 4], label: 'pending', backgroundColor: '#4e73df' },
+      { data: [3, 10, 13, 15, 22, 10], label: 'application', backgroundColor: '#42d3c1' }
     ]
   };
    // 3. Ensure this method exists

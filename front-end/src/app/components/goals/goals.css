@@ -1,0 +1,264 @@
+.dashboard-page {
+  padding: 20px;
+  background-color: #ffffff;
+
+}
+/* 2. Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  height: 100vh;
+  position: fixed; /* Keeps it on the left while scrolling */
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Profile Section (The blue top part) */
+.profile-section {
+  background: linear-gradient(135deg, #c4cbe8, #2e59a8);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.profile-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 4. Navigation Links */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.nav-link {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.nav-link:hover {
+  background-color: #f8f9fa;
+  color: #4c8bf5;
+}
+
+/* This class is automatically added by Angular's routerLinkActive */
+.nav-link.active {
+  background-color: #4c8bf5;
+  color: white !important;
+  border-left: 4px solid #1a458a;
+}
+/* Container & Typography */
+.dashboard-page {
+    padding: 24px;
+    background-color: #f9fafb;
+    font-family: 'Inter', -apple-system, sans-serif;
+    width: 80%;
+    margin-left: 250px;
+}
+
+/* Header Section */
+.main-header {
+    margin-bottom: 24px;
+}
+
+.back-arrow {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 8px;
+    color: #666;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin: 4px 0 0 32px;
+}
+
+/* Global Filters */
+.global-filters {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.required {
+    color: #ef4444;
+    margin-right: 4px;
+}
+
+.dashboard-select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    min-width: 200px;
+    background: white;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 24px 0;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px; /* Main table wide, stats narrow */
+    gap: 24px;
+    align-items: start;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #111827;
+}
+
+/* Table Section */
+.table-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #374151;
+    cursor: pointer;
+}
+
+.btn-text {
+    color: #2563eb;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Table Styles */
+.work-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.work-table th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #f3f4f6;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.work-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+
+.badge-done {
+    background: #dcfce7;
+    color: #166534;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Stats Column */
+.stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-subtext {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 15px;
+}
+
+.total-display {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.big-num {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.percent-change {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Donut Chart Mockup */
+.donut-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.donut-chart {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#2563eb 0% 70%, #d1d5db 70% 100%);
+    position: relative;
+}
+
+.donut-chart::after {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dot.highest { background: #2563eb; }
+.dot.high { background: #d1d5db; }

@@ -1,4 +1,18 @@
 <div class="profile-main-container">
+  <div class="sidebar">
+    <div class="profile-section">
+      <div class="profile-circle">L</div> <h3>Likhitha</h3>
+    </div>
+    <nav class="nav-menu">
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
+      <a routerLink="/profile" routerLinkActive="active" class="nav-link">Profile</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contacts</a>
+      <a routerLink="/settings" routerLinkActive="active" class="nav-link">Settings</a>
+      <a routerLink="/goals" routerLinkActive="active" class="nav-link">Goals</a>
+      <a (click)="onLogout()" class="nav-link logout-btn">Logout</a>
+    </nav>
+  </div>
+
   <div class="profile-content-card">
     <h2 class="page-title">Profile</h2>
 
